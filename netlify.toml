@@ -1,0 +1,54 @@
+[build]
+  publish = "."
+
+# Redirect www to apex
+[[redirects]]
+  from = "https://www.tomich.co/*"
+  to = "https://tomich.co/:splat"
+  status = 301
+  force = true
+
+# Pretty URLs (trailing slashes)
+[[redirects]]
+  from = "/ultrarunning"
+  to = "/ultrarunning/"
+  status = 301
+
+[[redirects]]
+  from = "/f3"
+  to = "/f3/"
+  status = 301
+
+[[redirects]]
+  from = "/kilimanjaro"
+  to = "/kilimanjaro/"
+  status = 301
+
+[[redirects]]
+  from = "/lifestyle"
+  to = "/lifestyle/"
+  status = 301
+
+# Custom 404
+# [[redirects]]
+#   from = "/*"
+#   to = "/404.html"
+#   status = 404
+
+# Headers for performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
