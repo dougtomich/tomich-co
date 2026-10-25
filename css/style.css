@@ -51,6 +51,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .sidebar-ad {
+  display: none; /* HIDDEN: Remove this line to restore ad placeholders */
   position: sticky;
   top: 5rem;
   align-self: start;
@@ -244,6 +245,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* --- In-content ad banner --- */
 .ad-banner {
+  display: none; /* HIDDEN: Remove this line to restore ad placeholders */
   background: var(--color-ad-bg);
   border: 1px dashed var(--color-ad-border);
   border-radius: 8px;
