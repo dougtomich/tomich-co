@@ -3,37 +3,86 @@
 
 # Redirect www to apex
 [[redirects]]
-  from = "https://www.tomich.co/*"
-  to = "https://tomich.co/:splat"
+  from = "https://www.tomichllc.com/*"
+  to = "https://tomichllc.com/:splat"
   status = 301
   force = true
 
-# Pretty URLs (trailing slashes)
+# Old domain redirect
+[[redirects]]
+  from = "https://www.tomich.co/*"
+  to = "https://tomichllc.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://tomich.co/*"
+  to = "https://tomichllc.com/:splat"
+  status = 301
+  force = true
+
+# Old category paths → new /gear/ paths
+[[redirects]]
+  from = "/ultrarunning/*"
+  to = "/gear/ultrarunning/:splat"
+  status = 301
+
 [[redirects]]
   from = "/ultrarunning"
-  to = "/ultrarunning/"
+  to = "/gear/ultrarunning/"
+  status = 301
+
+[[redirects]]
+  from = "/f3/*"
+  to = "/gear/f3/:splat"
   status = 301
 
 [[redirects]]
   from = "/f3"
-  to = "/f3/"
+  to = "/gear/f3/"
+  status = 301
+
+[[redirects]]
+  from = "/kilimanjaro/*"
+  to = "/gear/kilimanjaro/:splat"
   status = 301
 
 [[redirects]]
   from = "/kilimanjaro"
-  to = "/kilimanjaro/"
+  to = "/gear/kilimanjaro/"
+  status = 301
+
+[[redirects]]
+  from = "/lifestyle/*"
+  to = "/gear/lifestyle/:splat"
   status = 301
 
 [[redirects]]
   from = "/lifestyle"
-  to = "/lifestyle/"
+  to = "/gear/lifestyle/"
   status = 301
 
-# Custom 404
-# [[redirects]]
-#   from = "/*"
-#   to = "/404.html"
-#   status = 404
+# Old disclaimer path
+[[redirects]]
+  from = "/disclaimer.html"
+  to = "/gear/disclaimer.html"
+  status = 301
+
+# Pretty URLs for new sections
+[[redirects]]
+  from = "/gear"
+  to = "/gear/"
+  status = 301
+
+[[redirects]]
+  from = "/hair"
+  to = "/hair/"
+  status = 301
+
+[[redirects]]
+  from = "/kitchen"
+  to = "/kitchen/"
+  status = 301
 
 # Headers for performance
 [[headers]]
