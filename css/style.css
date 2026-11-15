@@ -335,7 +335,7 @@ img { max-width: 100%; height: auto; display: block; }
   .product-card { grid-template-columns: 1fr; }
   .product-image { width: 100%; height: 200px; }
   .site-header { flex-direction: column; gap: 0.75rem; }
-  .site-nav { gap: 1rem; }
+  .site-nav { gap: 0.5rem 1rem; flex-wrap: wrap; justify-content: center; }
   .hero h1 { font-size: 1.6rem; }
   .hero p { font-size: 1rem; }
 }
@@ -345,3 +345,32 @@ img { max-width: 100%; height: auto; display: block; }
 .text-center { text-align: center; }
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
+
+/* --- Strength page --- */
+.sc-rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.sc-rule { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem; font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.4; }
+.sc-rule-big { display: block; font-size: 1.8rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.02em; margin-bottom: 0.2rem; }
+.sc-gear { font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+.sc-gear strong { color: var(--color-text); }
+.sc-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 1.5rem; position: sticky; top: 0; background: var(--color-bg); padding: 0.5rem 0; z-index: 5; }
+.sc-tab { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--color-text-secondary); background: var(--color-surface); border: 2px solid var(--color-border); border-radius: 10px; padding: 0.7rem 0.5rem; cursor: pointer; transition: all 0.15s; }
+.sc-tab small { display: block; font-size: 0.75rem; font-weight: 500; margin-top: 0.15rem; }
+.sc-tab:hover { border-color: var(--color-accent); color: var(--color-text); }
+.sc-tab.active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.sc-day-intro { font-size: 0.95rem; color: var(--color-text-secondary); margin-bottom: 1.25rem; }
+.sc-ex { border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+.sc-ex-top { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+.sc-num { width: 2rem; height: 2rem; border-radius: 50%; background: var(--color-text); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sc-ex-top h3 { font-size: 1.25rem; font-weight: 700; flex: 1; min-width: 10rem; }
+.sc-reps { font-size: 1.5rem; font-weight: 800; color: var(--color-accent); white-space: nowrap; }
+.sc-reps small { font-size: 0.8rem; font-weight: 600; color: var(--color-text-secondary); }
+.sc-ex p { font-size: 0.95rem; line-height: 1.6; color: var(--color-text); }
+.sc-tip { margin-top: 0.6rem; background: var(--color-surface); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.88rem !important; color: var(--color-text-secondary) !important; }
+.sc-note { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
+.sc-note h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+.sc-note p { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6; }
+@media (max-width: 640px) {
+  .sc-rules { grid-template-columns: 1fr; }
+  .sc-ex { padding: 1rem; }
+  .sc-reps { width: 100%; padding-left: 2.75rem; font-size: 1.3rem; }
+}
